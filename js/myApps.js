@@ -1,4 +1,4 @@
-var theme = document.querySelector("section").classList;
+var theme = document.querySelector("body").classList;
 var toggle = document.querySelector(".slider");
 var isToggle = document.querySelector("#toggle-check");
 toggle.addEventListener("click", function () {

@@ -15,44 +15,42 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  height: 100vh;
-  width: 100vw;
   line-height: 1.5;
+  background-color: var(--main-bg);
   overflow-x: hidden;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 li {
   list-style: none;
 }
-
-section {
-  height: 100%;
-  width: 100%;
+#wrapper {
+  width: 80%;
+  margin: 30px auto;
 }
+/* header-title */
+#header-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* This is for top main back ground */
 .top-bground {
   position: absolute;
-  height: 27%;
+  height: 30vh;
   width: 100%;
   background-color: var(--top-bg);
   z-index: -1;
 }
-.bottom-bground {
-  position: absolute;
-  height: 73%;
-  width: 100%;
-  background-color: var(--main-bg);
-  z-index: -1;
-  bottom: 0;
-}
+
+/* Global */
 .light-theme .number {
   color: var(--secondary-color);
 }
@@ -65,9 +63,8 @@ section {
 .dark-theme .card-title {
   color: var(--primary-color);
 }
-/* Global */
 .card-box {
-  margin: 40px 0;
+  margin: 20px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
@@ -124,20 +121,6 @@ p.card-title,
   --secondary-color: hsl(0, 0%, 100%);
 }
 
-#wrapper {
-  width: 80%;
-  margin: auto;
-  padding: 30px 30px 10px 30px;
-  z-index: 1;
-}
-
-/* header-title */
-#header-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-}
 /* this is toggle label */
 .toggle-box {
   display: flex;
@@ -204,6 +187,7 @@ p.card-title,
 }
 
 /* header-section */
+
 .header-card {
   border-top: 5px solid;
 }
@@ -235,9 +219,8 @@ p.card-title,
 .yt-card {
   border-color: var(--yt-border);
 }
-
 .header-card ul {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 .header-card li:first-child {
@@ -270,9 +253,22 @@ p.card-title,
   align-content: center;
 }
 .body-card-box .number {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
+@media only screen and (min-width: 1441px) {
+  #wrapper {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .card-box {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+}
 @media only screen and (max-width: 600px) {
   body {
     overflow-x: hidden;
