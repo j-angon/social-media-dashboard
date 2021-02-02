@@ -16,6 +16,7 @@
   box-sizing: border-box;
 }
 body {
+  position: relative;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -44,7 +45,8 @@ li {
 /* This is for top main back ground */
 .top-bground {
   position: absolute;
-  height: 30vh;
+  top: -30px;
+  height: 30%;
   width: 100%;
   background-color: var(--top-bg);
   z-index: -1;
